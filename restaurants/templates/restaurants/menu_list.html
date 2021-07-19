@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <h1>{{ title }}</h1>
+
+  {% for i in info %}
+  <h3>Menu Restaurant: {{ i.restaurant.name }}</h3>
+  <h5>Menu Time: {{ i.time }}</h5>
+  <p>IDs: {{ rest_id }} {{i.id}}</p>
+  <a href="{% url 'menu_detail' rest_id i.id%}">Menu Detail</a>
+
+  {% endfor %}
+  
+</body>
+</html>
